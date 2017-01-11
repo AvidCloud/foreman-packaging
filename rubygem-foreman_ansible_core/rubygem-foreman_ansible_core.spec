@@ -5,12 +5,13 @@
 
 Name: %{?scl_prefix}rubygem-%{gem_name}
 Version: 0.0.1
-Release: 2%{?foremandist}%{?dist}
+Release: 3%{?foremandist}%{?dist}.avid
 Summary: Ansible integration with Foreman (theforeman.org): core bits
 Group: Development/Languages
 License: GPLv3
 URL: https://github.com/theforeman/foreman_ansible
-Source0: http://rubygems.org/gems/%{gem_name}-%{version}.gem
+#Source0: http://rubygems.org/gems/%{gem_name}-%{version}.gem
+Source0: %{gem_name}-%{version}.gem
 Requires: %{?scl_prefix_ruby}ruby(release)
 Requires: %{?scl_prefix_ruby}ruby
 Requires: %{?scl_prefix_ruby}ruby(rubygems)
@@ -31,7 +32,7 @@ the execution.
 Summary: Documentation for %{pkg_name}
 Group: Documentation
 Requires: %{?scl_prefix}%{pkg_name} = %{version}-%{release}
-BuildArch: noarch
+#BuildArch: noarch
 
 %description doc
 Documentation for %{pkg_name}.
